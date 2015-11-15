@@ -161,10 +161,10 @@ class TestArrays < MiniTest::Unit::TestCase
   # Verify that the list contains a number
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-include-3F
   def test_that_the_list_contains_a_number
-    skip "Waiting to be implemented"
+  
     array = [1,6,3,9,1,1,2,3]
     number = 9
-    included = false # replace false with the logic to check if 'number' is in the 'array'
+    included = array.include?(number)
     assert(included)
   end
 
@@ -172,9 +172,9 @@ class TestArrays < MiniTest::Unit::TestCase
   # Map creates a new array containing the values returned by the block
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-map
   def test_create_a_new_array_which_contains_each_original_value_doubled
-    skip "Waiting to be implemented"
+    
     array = [1,6,3,9,1,1,2,3]
-    new_array = array.map { | number| number * 3 } # Fix this so that numbers are doubled not trippled
+    new_array = array.map { | number| number * 2 } 
     assert_equal([2, 12, 6, 18, 2, 2, 4, 6], new_array)
   end
 
