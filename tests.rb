@@ -152,9 +152,9 @@ class TestArrays < MiniTest::Unit::TestCase
 
   # Count the number of even numbers in the list
   def test_count_number_of_even_numbers
-    skip "Waiting to be implemented"
+    
     array = [1,6,3,9,1,1,2,3]
-    count_of_even_numbers = 0 # replace 0 with the logic to count the number of even numbers
+    count_of_even_numbers = array.count { |x| x.even? }
     assert_equal(2, count_of_even_numbers)
   end
 
