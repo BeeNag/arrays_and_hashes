@@ -187,16 +187,16 @@ class TestArrays < MiniTest::Unit::TestCase
     
     array = ["mark", "sue", "bob"]
     new_array = array.map { |word| word.capitalize }
+    assert_equal(["Mark", "Sue", "Bob"], new_array)
   end
 
   # Use the the array.count method to complete this test
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-count
   def test_count_the_number_of_1s_in_the_list
-    skip "Waiting to be implemented"
-    # write a test that uses the array.count method
-    # to check that there are 3 '1s' in the list
+    
     array = [1,6,3,9,1,1,2,3]
-
+    new_array = array.count(1)
+    assert_equal(3, new_array)
   end
 
   # Find the maximum number in the list
