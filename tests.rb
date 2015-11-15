@@ -127,7 +127,7 @@ class TestArrays < MiniTest::Unit::TestCase
   def test_create_a_new_array_which_is_the_old_array_sorted_ascending
   
     array = [1,6,3,9,1,1,2,3]
-    new_array = array.sort { |x,y| y <=> x }
+    new_array = array.sort
     assert_equal([1, 1, 1, 2, 3, 3, 6, 9], array.sort)
   end
 
@@ -136,7 +136,7 @@ class TestArrays < MiniTest::Unit::TestCase
   def test_create_a_new_array_which_is_the_old_array_reversed
     skip "Waiting to be implemented"
     array = [1,6,3,9,1,1,2,3]
-    new_array = array # make the new array equal to array, but reversed
+    new_array = array.sort!
     assert_equal([3, 2, 1, 1, 9, 3, 6, 1], new_array)
   end
 
@@ -144,9 +144,9 @@ class TestArrays < MiniTest::Unit::TestCase
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-sort
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-reverse
   def test_create_a_new_array_which_is_the_old_array_sorted_descending
-    skip "Waiting to be implemented"
+    
     array = [1,6,3,9,1,1,2,3]
-    new_array = array # make the new array equal to array, but in descending order
+    new_array = array.sort.reverse
     assert_equal([9, 6, 3, 3, 2, 1, 1, 1], new_array)
   end
 
