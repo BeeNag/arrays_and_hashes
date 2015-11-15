@@ -217,10 +217,10 @@ class TestArrays < MiniTest::Unit::TestCase
 
   # Count the number of vowels in the 'input' string
   def test_count_the_number_of_vowels_in_a_string
-    skip "Waiting to be implemented"
+    
     input = "Hello world"
-    input.downcase.count('aeiou')
-    assert_equal(3, input)
+    vowels = input.downcase.count('aeiou')
+    assert_equal(3, vowels)
   end
 
   # Test setting and getting values from a hash
