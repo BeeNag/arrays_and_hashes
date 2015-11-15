@@ -118,16 +118,16 @@ class TestArrays < MiniTest::Unit::TestCase
     # use which ever you prefer
     # make this block return false for odd numbers and true for even numbers
     # this will reject the even numbers
-    new_array = array.reject { | number |   }
+    new_array = array.reject { | number |  number.odd? }
     assert_equal([1,3,9,1,1,3], new_array)
   end
 
   # Use the the array.sort method to complete this test
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-sort
   def test_create_a_new_array_which_is_the_old_array_sorted_ascending
-    skip "Waiting to be implemented"
+  
     array = [1,6,3,9,1,1,2,3]
-    new_array = array # make the new array equal to array, but sorted
+    new_array = array.sort { |x,y| y <=> x }
     assert_equal([1, 1, 1, 2, 3, 3, 6, 9], array.sort)
   end
 
