@@ -51,12 +51,14 @@ class TestArrays < MiniTest::Unit::TestCase
   #   puts "This is count #{number}"
   # end
   def test_create_a_new_array_with_odd_numbers_using_for_item_in_array
-    skip "Waiting to be implemented"
+    
     array = [1,6,3,9,1,1,2,3]
     new_array = []
 
     for number in array
-      # build up the new_array here
+      if number.odd?
+         new_array << number.to_i
+      end
     end
     assert_equal([1,3,9,1,1,3], new_array)
   end
