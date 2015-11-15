@@ -76,12 +76,14 @@ class TestArrays < MiniTest::Unit::TestCase
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-each
 
   def test_create_a_new_array_with_odd_numbers_using_each
-    skip "Waiting to be implemented"
+    
     array = [1,6,3,9,1,1,2,3]
     new_array = []
 
-    array.each do | number |
-      # build up the new_array here
+    array.each do | number | 
+      if number.odd?
+         new_array << number.to_i
+      end
     end
     assert_equal([1,3,9,1,1,3], new_array)
 
