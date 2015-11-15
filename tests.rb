@@ -184,9 +184,9 @@ class TestArrays < MiniTest::Unit::TestCase
   # Docs: http://ruby-doc.org/core-2.2.0/Array.html#method-i-map
   # Docs: http://ruby-doc.org/core-2.1.0/String.html#method-i-capitalize
   def test_create_a_new_array_which_contains_each_original_string_capatalized
-    skip "Waiting to be implemented"
+    
     array = ["mark", "sue", "bob"]
-    # write the rest of this test before implementing the logic
+    new_array = array.map { |word| word.capitalize }
   end
 
   # Use the the array.count method to complete this test
