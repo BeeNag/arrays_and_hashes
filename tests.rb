@@ -219,7 +219,8 @@ class TestArrays < MiniTest::Unit::TestCase
   def test_count_the_number_of_vowels_in_a_string
     skip "Waiting to be implemented"
     input = "Hello world"
-    # write the rest of this test before implementing the logic
+    input.downcase.count('aeiou')
+    assert_equal(3, input)
   end
 
   # Test setting and getting values from a hash
