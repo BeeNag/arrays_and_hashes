@@ -201,9 +201,9 @@ class TestArrays < MiniTest::Unit::TestCase
 
   # Find the maximum number in the list
   def test_find_the_largest_number_in_a_list
-    skip "Waiting to be implemented"
+    
     array = [1,6,3,9,1,1,2,3]
-    max = 0 # replace 0 with the logic to find the largest number
+    max = array.max
     assert_equal(9, max)
   end
 
